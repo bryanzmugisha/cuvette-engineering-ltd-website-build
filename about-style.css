@@ -1,0 +1,367 @@
+/* This is the About page CSS */
+/* ===============================================
+   ABOUT PAGE SPECIFIC STYLES
+   =============================================== */
+
+/* About Hero Section */
+.about-hero {
+    position: relative;
+    background-image: url('images/pexels-mcgzay-30661413.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(11, 44, 79, 0.75);
+    z-index: 1;
+}
+
+.about-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #e1eaff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* About Intro Section */
+/* WHO WE ARE SECTION */
+.about-intro {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 60px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.06);
+    position: relative;
+}
+
+/* Section heading */
+.about-intro h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: #0b2c4d; /* Corporate engineering blue */
+    margin-bottom: 35px;
+    position: relative;
+}
+
+/* Decorative underline */
+.about-intro h2::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 4px;
+    background-color: #f4b400; /* Accent gold */
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* Paragraph styling */
+.about-intro p {
+    font-size: 17px;
+    line-height: 1.85;
+    color: #444;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+/* Remove extra space at bottom */
+.about-intro p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-intro {
+        padding: 40px 25px;
+        margin: 50px 15px;
+    }
+
+    .about-intro h2 {
+        font-size: 28px;
+    }
+
+    .about-intro p {
+        font-size: 16px;
+    }
+}
+
+
+/* Mission & Vision Grid */
+.mission-vision {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.grid-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.mission, .vision {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.mission::before, .vision::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(135deg, #ff8c42 0%, #ff6b1a 100%);
+}
+
+.mission:hover, .vision:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.mission h2, .vision h2 {
+    font-size: 2rem;
+    color: #0b2c4f;
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
+    padding-left: 15px;
+}
+
+.mission p, .vision p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #555;
+    padding-left: 15px;
+}
+
+/* Why Choose Us Section */
+.why-choose {
+    padding: 80px 0;
+    background: #ffffff;
+    text-align: center;
+}
+
+.why-choose h2 {
+    font-size: 2.5rem;
+    color: #0b2c4f;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.why-item {
+    background: #f8f9fa;
+    padding: 40px 25px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.why-item:hover {
+    background: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.why-item i {
+    color: #ff8c42;
+    margin-bottom: 20px;
+}
+
+.why-item h3 {
+    font-size: 1.4rem;
+    color: #0b2c4f;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.why-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* HSE Commitment Section */
+.hse-commitment {
+    padding: 80px 0;
+    background: linear-gradient(135deg, rgba(11, 44, 79, 0.95) 0%, rgba(26, 77, 122, 0.95) 100%),
+                url('images/site03.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    text-align: center;
+}
+
+.hse-commitment h2 {
+    font-size: 2.3rem;
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.hse-commitment p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #e1eaff;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    color: #0b2c4f;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 35px;
+    line-height: 1.8;
+}
+
+/* Button Styles */
+.btn-secondary {
+    display: inline-block;
+    padding: 14px 35px;
+    background: transparent;
+    color: #0b2c4f;
+    text-decoration: none;
+    border: 2px solid #0b2c4f;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-secondary:hover {
+    background: #0b2c4f;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(11, 44, 79, 0.3);
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+@media (max-width: 992px) {
+    .about-hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .grid-2-col {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        min-height: 50vh;
+        padding: 40px 0;
+    }
+
+    .about-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-hero p {
+        font-size: 1rem;
+    }
+
+    .about-intro,
+    .mission-vision,
+    .why-choose,
+    .hse-commitment,
+    .cta-section {
+        padding: 50px 0;
+    }
+
+    .about-intro h2,
+    .why-choose h2,
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+
+    .hse-commitment h2 {
+        font-size: 1.8rem;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-intro p {
+        text-align: left;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .mission h2, .vision h2 {
+        font-size: 1.6rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+    }
+}

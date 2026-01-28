@@ -1,0 +1,212 @@
+/* ================= SERVICE DETAIL PAGE ================= */
+
+.service-detail {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 60px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.06);
+}
+
+/* Main title */
+.service-detail h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0b2c4d;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.service-detail h2 i {
+    color: #f4b400;
+    margin-right: 10px;
+}
+
+/* Intro text */
+.service-detail > p {
+    font-size: 17px;
+    line-height: 1.85;
+    color: #444;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+}
+
+/* Sub-headings */
+.service-detail h3 {
+    font-size: 24px;
+    color: #0b2c4d;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Accent line under h3 */
+.service-detail h3::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #f4b400;
+    display: block;
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+/* Service list */
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 50px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.service-list li {
+    font-size: 16px;
+    color: #333;
+    background: #f8f9fc;
+    padding: 14px 18px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.service-list li i {
+    color: #2e7d32; /* professional green */
+    font-size: 14px;
+}
+
+/* Paragraphs under sections */
+.service-detail h3 + p {
+    font-size: 16.5px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+/* ================= CTA SECTION WITH IMAGE ================= */
+
+.cta-section {
+    background:
+        linear-gradient(rgba(11, 44, 77, 0.85), rgba(11, 44, 77, 0.85)),
+        url("images/pexels-photo-fiber1-4497195.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 40px;
+    border-radius: 18px;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 40px;
+}
+
+/* CTA Heading */
+.cta-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* CTA Text */
+.cta-section p {
+    font-size: 14px;
+    margin-bottom: 22px;
+    opacity: 0.95;
+}
+
+/* CTA Button */
+.cta-section .btn-primary {
+    display: inline-block;
+    padding: 12px 32px;
+    background-color: #f4b400;
+    color: #0b2c4d;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.cta-section .btn-primary:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    .cta-section {
+        padding: 30px 22px;
+    }
+
+    .cta-section h3 {
+        font-size: 18px;
+    }
+
+    .cta-section p {
+        font-size: 14.5px;
+    }
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+    .service-detail {
+        padding: 40px 25px;
+        margin: 50px 15px;
+    }
+
+    .service-detail h2 {
+        font-size: 28px;
+    }
+
+    .service-detail h3 {
+        font-size: 21px;
+    }
+}
+/* ================= NORMALIZED SERVICE TEXT ================= */
+
+.service-detail h2 {
+    font-size: 26px;      /* was too large */
+    margin-bottom: 20px;
+}
+
+.service-detail h3 {
+    font-size: 20px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.service-detail p {
+    font-size: 15.5px;    /* normal body text */
+    line-height: 1.7;
+    margin-bottom: 18px;
+    color: #444;
+}
+
+.service-list li {
+    font-size: 15px;
+    padding: 10px 14px;
+}
+
+/* CTA section text */
+.cta-section h3 {
+    font-size: 20px;
+}
+
+.cta-section p {
+    font-size: 15px;
+}
+/* Reduce space below navbar */
+main {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Pull service section closer to header */
+.service-detail {
+    margin-top: 30px;   /* reduce from large value */
+    padding-top: 30px;  /* reduce internal spacing */
+}
